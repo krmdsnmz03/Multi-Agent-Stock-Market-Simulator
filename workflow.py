@@ -1,3 +1,4 @@
+import time
 from data.market_data import get_historical_data, get_stock_info
 from data.news_data import get_company_news
 from agents.tech_agent import analyze_technical_data
@@ -34,10 +35,16 @@ def run_analysis_pipeline(ticker: str) -> dict:
     tech_report = analyze_technical_data(ticker, data_summary_str)
     results["technical"] = tech_report
     
+    # To avoid Gemini Free Tier API rate limits (15 RPM), we wait slightly
+    time.sleep(5)
+    
     # 3. Run Fundamental Agent
     print(f"Running Fundamental Analysis for {ticker}...")
     fund_report = analyze_fundamental_data(ticker, news_data)
     results["fundamental"] = fund_report
+    
+    # To avoid Gemini Free Tier API rate limits (15 RPM), we wait slightly
+    time.sleep(5)
     
     # 4. Run Portfolio Manager Agent
     print(f"Generating Portfolio Manager Decision for {ticker}...")

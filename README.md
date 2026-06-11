@@ -34,7 +34,8 @@ A final supervisor prompt reviews the Portfolio Manager's written investment the
 - **Agent Orchestration:** LangChain (managing tool execution, memory, and multi-agent reasoning loops).
 - **LLM Engine:** Google Gemini 1.5 Pro via API for robust reasoning, advanced NLP tasks, and large context window processing.
 - **Data Processing:** Python (Pandas, NumPy) for numerical arrays, coupled with NLP libraries (NLTK, spaCy, or directly via LLM prompts).
-- **User Interface:** Streamlit for interactive visualizations and reading the agents' generated reports in real-time.
+- **User Interface & Storage:** Streamlit for interactive visualizations. Features a live Dashboard and a persistent **History Tab** (backed by a local JSON database) to review and backtest past AI decisions without consuming additional API quotas.
+- **Rate Limit Handling:** Built-in delay mechanisms to gracefully handle Google Gemini API rate limits (Free Tier quotas) during multi-agent sequential execution.
 
 ## 🛠️ Team Member Responsibilities
 
