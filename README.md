@@ -48,3 +48,36 @@ A final supervisor prompt reviews the Portfolio Manager's written investment the
 - **Fundamental NLP & Web Integration:** Development of the Fundamental Analysis Agent, including news APIs, sentiment analysis pipelines, and text summarization loops.
 - **UI/UX Development:** Designing the interactive Streamlit frontend to visualize both the data and the agents' textual thought processes.
 - **Evaluation Framework:** Designing the LLM-in-the-loop supervisor mechanism to audit the final textual reports.
+
+---
+
+## 🚀 Getting Started (Installation)
+
+To run this project locally, follow these steps:
+
+**1. Clone the repository:**
+```bash
+git clone https://github.com/KULLANICI_ADINIZ/Multi-Agent-Stock-Market-Simulator.git
+cd Multi-Agent-Stock-Market-Simulator
+```
+
+**2. Create a virtual environment and install dependencies:**
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+**3. Configure Environment Variables:**
+Create a `.env` file in the root directory and add your API keys:
+```env
+GOOGLE_API_KEY="your_google_gemini_api_key_here"
+NEWS_API_KEY="your_newsapi_key_here"
+```
+
+**4. Run the Application:**
+Launch the Streamlit interface:
+```bash
+streamlit run app.py
+```
+Open your browser at `http://localhost:8501` to use the simulator.
