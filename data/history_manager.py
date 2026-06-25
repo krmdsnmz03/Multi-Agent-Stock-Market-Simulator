@@ -15,7 +15,7 @@ def load_history():
         print(f"Error loading history: {e}")
         return []
 
-def save_history(ticker, technical, fundamental, manager):
+def save_history(ticker, technical, fundamental, manager, supervisor="No supervisor report available."):
     """Saves a new analysis result to the history JSON file."""
     history = load_history()
     
@@ -24,7 +24,8 @@ def save_history(ticker, technical, fundamental, manager):
         "ticker": ticker.upper(),
         "technical": technical,
         "fundamental": fundamental,
-        "manager": manager
+        "manager": manager,
+        "supervisor": supervisor
     }
     
     # Insert at the beginning so the newest is first
