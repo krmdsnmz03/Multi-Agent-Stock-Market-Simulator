@@ -81,3 +81,8 @@ Launch the Streamlit interface:
 streamlit run app.py
 ```
 Open your browser at `http://localhost:8501` to use the simulator.
+
+## Recent Updates
+- Updated the generate_portfolio_decision function in the Portfolio Manager Agent module to accept the investor persona (Balanced, Aggressive, Conservative) parameter from the Streamlit UI.
+- Integrated the active investor persona into the prompt template of the Portfolio Manager Agent to customize the investment decision logic.
+
