@@ -38,7 +38,7 @@ def run_analysis_pipeline(ticker: str, short_sma: int = 20, long_sma: int = 50, 
     results["technical"] = tech_report
     
     # To avoid Gemini Free Tier API rate limits (15 RPM), we wait slightly
-    time.sleep(5)
+    time.sleep(10)
     
     # 3. Run Fundamental Agent
     print(f"Running Fundamental Analysis for {ticker}...")
@@ -46,7 +46,7 @@ def run_analysis_pipeline(ticker: str, short_sma: int = 20, long_sma: int = 50, 
     results["fundamental"] = fund_report
     
     # To avoid Gemini Free Tier API rate limits (15 RPM), we wait slightly
-    time.sleep(5)
+    time.sleep(10)
     
     # 4. Run Portfolio Manager Agent
     print(f"Generating Portfolio Manager Decision for {ticker}...")
@@ -54,7 +54,7 @@ def run_analysis_pipeline(ticker: str, short_sma: int = 20, long_sma: int = 50, 
     results["manager"] = manager_report
     
     # To avoid Gemini Free Tier API rate limits (15 RPM), we wait slightly
-    time.sleep(5)
+    time.sleep(10)
     
     # 5. Run Supervisor Bias Auditor Agent
     print(f"Running Supervisor Cognitive Bias Audit for {ticker}...")
